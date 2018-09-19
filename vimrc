@@ -2,7 +2,17 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+"---------------------------------------------------------------------------
+"-- Settings
+"---------------------------------------------------------------------------
 
+set nu
+colorscheme gruvbox
+set background=dark
+
+"---------------------------------------------------------------------------
+"-- Functions to move lines up and down ------------------------------------
+"---------------------------------------------------------------------------
 
 function! MoveLineUp()
   call MoveLineOrVisualUp(".", "")
@@ -48,17 +58,15 @@ function! MoveLineOrVisualUpOrDown(move_arg)
   execute "normal! ".col_num."|"
 endfunction
 
-map <C-o> :NERDTreeToggle<CR>
-map <C-T> :Files<CR>
 
 nnoremap <silent> <C-K> :<C-u>call MoveLineUp()<CR>
 nnoremap <silent> <C-J> :<C-u>call MoveLineDown()<CR>
 inoremap <silent> <C-K> <C-o>:call MoveLineUp()<CR>
 inoremap <silent> <C-J> <C-o>:call MoveLineDown()<CR>
-"vnoremap <silent> <C-K> :<C-u>call MoveVisualUp()<CR>
-"vnoremap <silent> <C-J> :<C-u>call MoveVisualDown()<CR>
 xnoremap <silent> <C-K> :<C-u>call MoveVisualUp()<CR>
 xnoremap <silent> <C-J> :<C-u>call MoveVisualDown()<CR>
+
+"---------------------------------------------------------------------------
 
 let g:lightline = {
       \ 'colorscheme': 'wombat',

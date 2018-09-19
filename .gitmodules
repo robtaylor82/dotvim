@@ -6,3 +6,7 @@
 	path = bundle/vim-sensible
 	url = https://github.com/tpope/vim-sensible
 	ignore = dirty
+[submodule "bundle/gruvbox"]
+	path = bundle/gruvbox
+	url = https://github.com/morhetz/gruvbox.git
+	ignore = dirty
