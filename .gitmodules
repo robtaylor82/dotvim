@@ -2,3 +2,6 @@
 	path = bundle/lightline.vim
 	url = https://github.com/itchyny/lightline.vim
 	ignore = dirty
+[submodule "bundle/vim-sensible"]
+	path = bundle/vim-sensible
+	url = https://github.com/tpope/vim-sensible
