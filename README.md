@@ -13,5 +13,9 @@ git submodule add http://github.com/name/of/repository
 ### Upgrading modules
 
 ```bash
-git submodule foreach git pull origin master
+# First time checkout requires the init flag
+git submodule update --init --recursive
+
+# Updates
+git submodule update --recursive
 ```
