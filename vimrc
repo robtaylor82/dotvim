@@ -9,8 +9,10 @@ filetype plugin indent on
 set nu
 colorscheme gruvbox
 set background=dark
+hi SpellBad cterm=underline ctermfg=red
 
 set nocompatible
+set showtabline=2
 set modelines=0
 
 set tabstop=4
@@ -34,9 +36,23 @@ set backspace=indent,eol,start
 set laststatus=2
 set relativenumber
 set undofile
+set spell spelllang=en_gb
 
 "---------------------------------------------------------------------------
-"-- Functions to move lines up and down ------------------------------------
+"-- tab shortcuts ----------------------------------------------------------
+"---------------------------------------------------------------------------
+
+nmap gn :tabnew <CR>
+nmap gc :tabclose <CR>
+
+"---------------------------------------------------------------------------
+"-- fzf shortcurts ----------------------------------------------------------
+"---------------------------------------------------------------------------
+
+nmap gf :Files<CR>
+
+"---------------------------------------------------------------------------
+"-- functions to move lines up and down ------------------------------------
 "---------------------------------------------------------------------------
 
 function! MoveLineUp()
